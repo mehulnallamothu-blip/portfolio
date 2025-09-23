@@ -1,5 +1,5 @@
 
-# Sai Vivek — Apple‑style Portfolio (Next.js + Tailwind)
+# Sai Vivek — Portfolio (Next.js + Tailwind)
 
 A sleek, Apple‑inspired portfolio site built with Next.js (App Router), Tailwind CSS, Framer Motion, and lucide‑react.
 
