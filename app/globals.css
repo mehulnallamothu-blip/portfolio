@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+html, body {
+  background: #000;
+  color: #fff;
+}
+
+.glass {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl;
+}
+.badge {
+  @apply px-2.5 py-1 rounded-full border border-white/10 bg-white/10 text-white text-xs;
+}
+.btn {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-black hover:bg-white/90 transition;
+}
+.btn-ghost {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-white/80 hover:bg-white/10 transition;
+}
+.card {
+  @apply glass p-5;
+}
+.card-title {
+  @apply text-lg font-semibold text-white/90;
+}
+.card-subtle {
+  @apply text-sm text-white/50;
+}
+.stat {
+  @apply rounded-xl border border-white/10 bg-white/5 p-3;
+}
+
+/* === Gradient System (global) === */
+:root {
+  --grad-primary: linear-gradient(90deg, #6ee7b7 0%, #60a5fa 100%);
+  --grad-soft: radial-gradient(60rem 60rem at -10% -10%, rgba(99, 255, 212, .10), transparent 60%),
+               radial-gradient(50rem 50rem at 110% 10%, rgba(120, 80, 255, .08), transparent 60%),
+               radial-gradient(40rem 40rem at 50% 120%, rgba(255, 255, 255, .04), transparent 60%);
+}
+
+/* Gradient text for section titles */
+.gradient-title {
+  background-image: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Section backdrop: subtle halos like the hero */
+.section-bg {
+  position: relative;
+}
+.section-bg::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--grad-soft);
+}
+
+/* Gradient ring + glass for cards (keeps your existing .card look) */
+.card-gradient {
+  position: relative;
+  overflow: hidden;
+}
+.card-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;                     /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.05));
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.card-gradient::after {
+  /* soft inner glow */
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(60% 80% at 50% 0%, rgba(255,255,255,0.06), transparent 60%);
+  pointer-events: none;
+}
+
+/* Primary gradient button */
+.btn-gradient {
+  @apply inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium;
+  background-image: var(--grad-primary);
+  color: #000;
+}
+.btn-gradient:hover {
+  filter: brightness(0.95);
+}
+
+/* Keep motion accessible (already suggested previously) */
+@media (prefers-reduced-motion: reduce){
+  * { animation: none !important; transition: none !important; }
+}
+
