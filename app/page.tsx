@@ -235,7 +235,7 @@ export default function Home() {
                   <div className="flex items-center gap-3">
                     <Sparkles className="size-5 text-emerald-300" />
                     <p className="text-white/80">
-                      Currently: Research Assistant @ CSU
+                      Currently: Data Analyst at Athenadoyens LLC
                     </p>
                   </div>
                   <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
