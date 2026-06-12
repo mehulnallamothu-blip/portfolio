@@ -543,7 +543,7 @@ export default function Home() {
                 Say hello.
               </h2>
               <p className="mt-2 text-white/60 max-w-prose">
-                Open to Software Engineering, ML-adjacent, and infra roles.
+                 Open to Software Engineering, ML-adjacent, and infra roles.
               </p>
             </div>
 
