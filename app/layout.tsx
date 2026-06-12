@@ -5,8 +5,9 @@ import CursorGlow from "@/components/effects/CursorGlow";
 import BackgroundFX from "@/components/effects/BackgroundFX"; // 👈 add
 
 export const metadata: Metadata = {
-  title: "Sai Vivek · Software Engineer",
-  description: "Apple-style portfolio by Sai Vivek Padakanti",
+  title: "Mehul Nallamothu · Data Analyst",
+  description:
+    "Portfolio of Mehul Nallamothu | Data Analyst | AI Engineer | Cloud Data Engineer",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
