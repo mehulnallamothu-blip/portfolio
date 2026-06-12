@@ -1,5 +1,5 @@
 
-# Sai Vivek — Portfolio (Next.js + Tailwind)
+# Mehul Nallamothu — Portfolio (Next.js + Tailwind)
 
 A sleek, Apple‑inspired portfolio site built with Next.js (App Router), Tailwind CSS, Framer Motion, and lucide‑react.
 
